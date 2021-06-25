@@ -1,0 +1,70 @@
+body{
+  background-color: #767689;
+}
+.Todo{
+  background-color: #9d9dff;
+  min-height:500px;
+  width:400px;
+  margin:40px auto;
+}
+#to-do-list input{
+  padding:0 20px;
+  width:200px;
+  height:50px;
+  border:2px solid white;
+  background-color: #62629d;
+  color:#fff;
+  font-size:18px;
+  border-radius: 10px;
+  margin:20px;
+
+}
+#to-do-list input::placeholder{
+  color:rgba(255,255,255,0.5);
+}
+#to-do-list input:focus,button:focus{
+    outline:none;
+}
+#to-do-list button{
+   width:80px;
+  height: 50px;
+  border-radius:5px;
+  border:0;
+  background-color: #4e4eff;
+  cursor:pointer;
+  color:#fff;
+  font-weight:bolder;
+  
+}
+h1{
+  color:#fff;
+  background-color:#767689;
+  text-align:center;
+  
+}
+
+.center{
+  text-align: center;
+}
+
+p{
+  font-size:18px;
+}
+
+p span{
+  color:blue;
+  font-size:20px;
+
+}
+
+#navigation{
+  width:80px;
+  height: 50px;
+  border-radius:5px;
+  border:0;
+  background-color: #4e4eff;
+  cursor:pointer;
+  color:#fff;
+  font-weight:bolder;
+  margin:20px;
+}
