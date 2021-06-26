@@ -98,14 +98,17 @@ const updateTodo = async (req, res) => {
     }
 
     try {
-         let user = await User.findById(body.userId);
-         user.todos.forEach((ele) => {
-             if (ele.key === body.todoId) {
-                 ele.text = body.todo;
-             }
-         });
-         user.markModified("todos");
-         await user.save();
+         await User.updateOne(
+            {
+                _id: body.userId,
+                "todos.key": body.todoId,
+            },
+            {
+                $set: {
+                    "todos.$.text": body.todo,
+                },
+            }
+         );
          return res
             .status(200)
             .json({ message: `Todo updated`, todoId: body.todoId });

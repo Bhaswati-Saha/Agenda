@@ -41,7 +41,7 @@ class Todo extends React.Component {
             })
                 .then((res) => res.json())
                 .then((res) => {
-                    newItem.key = res.id;
+                    newItem.key = res.todoId;
                     const newItems = [...this.state.items, newItem];
                     this.setState({
                         items: newItems,
